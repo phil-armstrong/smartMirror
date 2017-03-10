@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
+import { ClockComponent } from './clock/clock.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { RepoBrowserComponent } from './github/repo-browser/repo-browser.component';
@@ -17,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
+    ClockComponent,
     AppComponent,
     AboutComponent,
     RepoBrowserComponent,
