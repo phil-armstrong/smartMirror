@@ -1,20 +1,24 @@
 import {Component} from '@angular/core';
+import {AlarmService} from './alarm.service'
 
 @Component({
   selector: 'clock',
   styleUrls: ['./clock.component.css'],
-  templateUrl: './clock.component.html'
+  templateUrl: './clock.component.html',
+  providers: [AlarmService]
 })
 export class ClockComponent {
-  private date;
-  private format;
+  protected date;
+  protected timeFormat;
+  protected dateFormat;
 
-  constructor() { 
-    this.format = "HH:mm:ss";
-    this.date =  new Date(); 
+  constructor(private alarmService: AlarmService) { 
+    this.timeFormat = "HH:mm:ss";
+    this.dateFormat = "EEEE, d MMMM y";
+    
     
     setInterval(() => {
-        this.date =  new Date();
-     }, 1000);
+       this.date =  new Date();
+    }, 1000);
   }
 }

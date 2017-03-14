@@ -15,9 +15,13 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+import { AdvancedClockComponent} from './clock/advanced.clock.component';
+
+import { AlarmService} from './clock/alarm.service';
 
 @NgModule({
   declarations: [
+    AdvancedClockComponent,
     ClockComponent,
     AppComponent,
     AboutComponent,

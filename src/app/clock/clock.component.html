@@ -1,1 +1,4 @@
-<h2 class="clock">{{date | date: format}}</h2>
+<a [routerLink]="['/clock']">
+	<span class="clock">{{date | date: timeFormat}}</span>
+	<span class="date">{{ date | date: dateFormat}}</span>
+</a>
